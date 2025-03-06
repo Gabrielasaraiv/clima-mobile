@@ -21,7 +21,7 @@ function App(){
             <View style={styles.detailsContainer}>
                 <Text style={styles.temperature}>39 °C</Text>
                 <Image source={ night ? require('../assets/images/noite.png') : 
-                require('../assets/images/sol.png')} 
+                require('../assets/images/sol.png')} style={styles.weatherIcon} 
                 //o '?' é como um if: se for noite, mudar para tal cor, se nao for, mudar para tal cor 
                 /> 
                 
@@ -38,38 +38,66 @@ function App(){
 
 const styles = StyleSheet.create({
     bottomImage: {
-
+        width: '115%',
+        height: '57%',
+        position: 'absolute',
+        bottom: 0,
+        resizeMode: 'cover'
     },
+
     header: {
-
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 20
     },
+
     city:{
-
+            fontWeight:'bold',
+            fontSize: 25,
+            color: '#fff'
     },
+
     weatherIcon: {
-
+        width: 100,
+        height: 100,
+        alignSelf: 'flex-end'
     },
+
     detailsContainer:{
-
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     },
+
     weatherCondition: {
-
+        fontSize: 18,
+        fontWeight: 'bold',
+        alignSelf: 'flex-end',
+        marginBottom: 20,
+        color: '#fff'
     },
+
     temperature:{
-
+    fontSize: 55,
+    marginBottom: 20,
+    color: '#fff'
     },
+
     container: {
         flex:1, // total da tela
         padding:20 // tudo que fica em volta do componente(por dentro)
 
     },
+
     containerBgDay:{
         backgroundColor: '#09d3f3'
 
     },
+
     containerBgNight: {
         backgroundColor: '#333'
     },
+
     text:{
         fontSize: 22,
         color: '#fff',
